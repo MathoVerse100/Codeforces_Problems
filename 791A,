@@ -1,0 +1,9 @@
+a, b = [int(x) for x in input().split()]
+n = 1
+
+while True:
+    if (3 / 2) ** n > b / a:
+        print(n)
+        break
+    else:
+        n += 1
