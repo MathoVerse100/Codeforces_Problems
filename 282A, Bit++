@@ -1,0 +1,17 @@
+n = int(input())
+input_list = []
+i = 0
+
+while i < n:
+    input_list.append(input())
+    i += 1
+
+counter = 0
+
+for operation in input_list:
+    if operation == "++X" or operation == "X++":
+        counter += 1
+    else:
+        counter -= 1
+
+print(counter)
