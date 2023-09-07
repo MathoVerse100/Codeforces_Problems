@@ -1,0 +1,11 @@
+n, k = [int(x) for x in input().split()]
+i = 0
+scores = [int(x) for x in input().split()]
+
+counter = 0
+
+for score in scores:
+    if score >= scores[k - 1] and score > 0:
+        counter += 1
+
+print(counter)
