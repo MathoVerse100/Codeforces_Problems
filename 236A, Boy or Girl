@@ -1,0 +1,13 @@
+def distinct_characters(word):
+    distinct_letters = []
+    for letter in word:
+        if letter not in distinct_letters:
+            distinct_letters.append(letter)
+    if len(distinct_letters) % 2 == 1:
+        print("IGNORE HIM!")
+    else:
+        print("CHAT WITH HER!")
+
+
+username = input()
+distinct_characters(username)
