@@ -1,0 +1,6 @@
+integer = int(input())
+
+if integer % 2 == 0 and integer != 2:
+    print("YES")
+else:
+    print("NO")
