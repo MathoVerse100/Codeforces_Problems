@@ -1,0 +1,4 @@
+input_operation = input()
+operation_list = sorted([int(x) for x in input_operation.split("+")])
+
+print("+".join([str(x) for x in operation_list]))
