@@ -1,0 +1,14 @@
+n = int(input())
+input_list = []
+i = 0
+
+while i < n:
+    input_list.append(input())
+    i += 1
+
+counter = 0
+for word in input_list:
+    if word.count("1") in [2, 3]:
+        counter += 1
+
+print(counter)
