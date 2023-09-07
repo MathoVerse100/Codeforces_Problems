@@ -1,0 +1,14 @@
+word = input()
+upper_counter = 0
+lower_counter = 0
+
+for letter in word:
+    if letter.upper() == letter:
+        upper_counter += 1
+    else:
+        lower_counter += 1
+
+if upper_counter <= lower_counter:
+    print(word.lower())
+else:
+    print(word.upper())
