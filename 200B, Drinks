@@ -1,0 +1,4 @@
+n = int(input())
+percentages = [int(x) for x in input().split()]
+
+print(sum(percentages) / n)
