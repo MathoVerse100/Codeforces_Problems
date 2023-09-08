@@ -1,0 +1,11 @@
+n1 = list(input())
+n2 = list(input())
+n3 = []
+
+for i in range(len(n1)):
+    if n1[i] != n2[i]:
+        n3.append("1")
+    else:
+        n3.append("0")
+
+print("".join(n3))
