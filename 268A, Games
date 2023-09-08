@@ -1,0 +1,16 @@
+n = int(input())
+h_clothes = []
+a_clothes = []
+i = 0
+counter = 0
+
+while i < n:
+    h, a = [int(x) for x in input().split()]
+    h_clothes.append(h)
+    a_clothes.append(a)
+    i += 1
+
+for i in range(n):
+    counter += a_clothes.count(h_clothes[i])
+
+print(counter)
