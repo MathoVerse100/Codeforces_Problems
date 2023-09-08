@@ -1,0 +1,22 @@
+def change_order(word):
+    word_list = list(word)
+    i = 0
+    while i < len(word) - 1:
+        if word_list[i] == "B" and word_list[i + 1] == "G":
+            word_list[i] = "G"
+            word_list[i + 1] = "B"
+            i += 2
+        else:
+            i += 1
+    return "".join(word_list)
+
+
+n, t = [int(x) for x in input().split()]
+sequence = input()
+i = 0
+
+while i < t:
+    sequence = change_order(sequence)
+    i += 1
+
+print(sequence)
