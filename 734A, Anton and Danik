@@ -1,0 +1,17 @@
+n = int(input())
+game_winners = input()
+anton_counter = 0
+danik_counter = 0
+
+for i in range(n):
+    if game_winners[i] == "A":
+        anton_counter += 1
+    else:
+        danik_counter += 1
+
+if anton_counter > danik_counter:
+    print("Anton")
+elif anton_counter < danik_counter:
+    print("Danik")
+else:
+    print("Friendship")
