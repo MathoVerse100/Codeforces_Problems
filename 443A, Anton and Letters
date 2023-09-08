@@ -1,0 +1,19 @@
+input_list = list(input())
+
+input_list.remove("{")
+input_list.remove("}")
+
+while True:
+    try:
+        input_list.remove(" ")
+    except ValueError:
+        break
+
+while True:
+    try:
+        input_list.remove(",")
+    except ValueError:
+        break
+
+
+print(len(set(input_list)))
