@@ -1,0 +1,8 @@
+n = int(input())
+Little_X = input().split()[1::]
+Little_Y = input().split()[1::]
+
+if len(set(Little_X + Little_Y)) == n:
+    print("I become the guy.")
+else:
+    print("Oh, my keyboard!")
