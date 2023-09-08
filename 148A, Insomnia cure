@@ -1,0 +1,15 @@
+dragons = []
+j = 0
+
+while j < 5:
+    dragons.append(int(input()))
+    j += 1
+
+
+counter = 0
+
+for i in range(1, dragons[-1] + 1):
+    if any(i % dragon == 0 for dragon in dragons[0:4]):
+        counter += 1
+
+print(counter)
