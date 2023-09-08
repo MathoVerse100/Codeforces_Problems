@@ -1,0 +1,11 @@
+n = int(input())
+squad_soldiers = [int(x) for x in input().split()]
+largest = max(squad_soldiers)
+smallest = min(squad_soldiers)
+largest_index = squad_soldiers.index(largest)
+squad_soldiers.remove(largest)
+squad_soldiers.insert(0, largest)
+reverse_squad_soldiers = squad_soldiers[::-1]
+smallest_index = reverse_squad_soldiers.index(smallest)
+
+print(smallest_index + largest_index)
