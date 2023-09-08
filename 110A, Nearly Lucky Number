@@ -1,0 +1,7 @@
+n = input()
+lucky_sum = n.count("7") + n.count("4")
+
+if lucky_sum in [4, 7]:
+    print("YES")
+else:
+    print("NO")
