@@ -1,0 +1,12 @@
+n = int(input())
+i = 0
+counter = 0
+capacity_counter = []
+
+while i < n:
+    exit_enter = [int(x) for x in input().split()]
+    counter += exit_enter[1] - exit_enter[0]
+    capacity_counter.append(counter)
+    i += 1
+
+print(max(capacity_counter))
