@@ -1,0 +1,13 @@
+n = int(input())
+divisibility_tests = []
+i = 0
+
+while i < n:
+    divisibility_tests.append([int(x) for x in input().split()])
+    i += 1
+
+for i in range(n):
+    if divisibility_tests[i][0] % divisibility_tests[i][1] == 0:
+        print(0)
+    else:
+        print(divisibility_tests[i][1] - (divisibility_tests[i][0] % divisibility_tests[i][1]))
