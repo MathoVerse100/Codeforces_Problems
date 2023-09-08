@@ -1,0 +1,9 @@
+def alternating_sum(number):
+    if number % 2 == 1:
+        print(-(n + 1) // 2)
+    else:
+        print(n // 2)
+
+
+n = int(input())
+alternating_sum(n)
