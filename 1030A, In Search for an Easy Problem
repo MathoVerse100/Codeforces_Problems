@@ -1,0 +1,7 @@
+n = int(input())
+decisions = [int(x) for x in input().split()]
+
+if sum(decisions) > 0:
+    print("HARD")
+else:
+    print("EASY")
