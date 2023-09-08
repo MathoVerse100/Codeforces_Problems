@@ -1,0 +1,8 @@
+n = int(input())
+i_to_pi = [int(x) for x in input().split()]
+pi_to_i = []
+
+for i in range(1, n + 1):
+    pi_to_i.append(i_to_pi.index(i) + 1)
+
+print(" ".join([str(x) for x in pi_to_i]))
