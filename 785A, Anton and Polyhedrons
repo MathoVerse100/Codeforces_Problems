@@ -1,0 +1,23 @@
+n = int(input())
+polyhedrons = []
+i = 0
+
+while i < n:
+    polyhedrons.append(input())
+    i += 1
+
+counter = 0
+
+for polyhedron in polyhedrons:
+    if polyhedron == "Tetrahedron":
+        counter += 4
+    elif polyhedron == "Cube":
+        counter += 6
+    elif polyhedron == "Octahedron":
+        counter += 8
+    elif polyhedron == "Dodecahedron":
+        counter += 12
+    elif polyhedron == "Icosahedron":
+        counter += 20
+
+print(counter)
