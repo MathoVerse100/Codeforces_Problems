@@ -1,0 +1,13 @@
+n = int(input())
+coin_values = [int(x) for x in input().split()]
+coin_values = sorted(coin_values, reverse=True)
+total = sum(coin_values)
+counter = 0
+
+for i in range(n):
+    j = i + 1
+    counter += coin_values[i]
+    if counter > total / 2:
+        break
+
+print(j)
