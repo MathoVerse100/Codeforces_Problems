@@ -1,0 +1,23 @@
+guest = list(input())
+host = list(input())
+shuffled_host = list(input())
+
+try:
+    for i in range(len(guest)):
+        shuffled_host.remove(guest[i])
+except ValueError:
+    print("NO")
+    exit()
+
+
+try:
+    for i in range(len(host)):
+        shuffled_host.remove(host[i])
+except ValueError:
+    print("NO")
+    exit()
+
+if shuffled_host == []:
+    print("YES")
+else:
+    print("NO")
