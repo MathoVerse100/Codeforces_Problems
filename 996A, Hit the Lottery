@@ -1,0 +1,12 @@
+denominations = [100, 20, 10, 5, 1]
+n = int(input())
+i = 0
+counter = 0
+
+while i < 5:
+    if n >= denominations[i]:
+        counter += (n - n % denominations[i]) // denominations[i]
+        n = n % denominations[i]
+    i += 1
+
+print(counter)
