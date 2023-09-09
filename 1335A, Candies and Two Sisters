@@ -1,0 +1,13 @@
+t = int(input())
+test_cases = []
+i = 0
+
+while i < t:
+    test_cases.append(int(input()))
+    i += 1
+
+for i in range(t):
+    if test_cases[i] % 2 == 1:
+        print((test_cases[i] - 1) // 2)
+    else:
+        print((test_cases[i] - 2) // 2)
