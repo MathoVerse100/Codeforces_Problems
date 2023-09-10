@@ -1,0 +1,18 @@
+n = int(input())
+sequence = [int(x) for x in input().split()]
+non_decreasing_subsequences = []
+j = 0
+
+for i in range(n - 1):
+    if sequence[i] > sequence[i + 1]:
+        non_decreasing_subsequences.append(sequence[j:i + 1])
+        j = i + 1
+    if i == n - 2 and sequence[n - 2] <= sequence[n - 1]:
+        non_decreasing_subsequences.append(sequence[j::])
+
+ascending_lengths = [len(x) for x in non_decreasing_subsequences]
+
+if not ascending_lengths:
+    print(n)
+else:
+    print(max(ascending_lengths))
