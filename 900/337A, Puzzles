@@ -1,0 +1,12 @@
+n, m = [int(x) for x in input().split()]
+quantities = sorted([int(x) for x in input().split()])
+puzzles_to_buy = []
+i = 0
+
+for i in range(m - n + 1):
+    puzzles_to_buy.append(quantities[i + n - 1] - quantities[i])
+
+print(quantities)
+print(puzzles_to_buy)
+
+print(min(puzzles_to_buy))
