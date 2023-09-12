@@ -1,0 +1,11 @@
+n = int(input())
+m = abs(n)
+
+choice_1 = n
+choice_2 = int((m - m % 10) // 10)
+choice_3 = int((m - m % 100) // 10 + m % 10)
+
+if n < 0:
+    print(max(choice_1, -choice_2, -choice_3))
+else:
+    print(max(choice_1, choice_2, choice_3))
