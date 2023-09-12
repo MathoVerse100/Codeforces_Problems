@@ -1,0 +1,22 @@
+t = int(input())
+i = 0
+numbers = []
+
+while i < t:
+    numbers.append(int(input()))
+    i += 1
+
+for number in numbers:
+    if number % 2 == 1 and number > 1:
+        print("YES")
+    elif number == 1:
+        print("NO")
+    else:
+        while True:
+            number = number // 2
+            if number % 2 == 1 and number > 1:
+                print("YES")
+                break
+            elif number == 1:
+                print("NO")
+                break
