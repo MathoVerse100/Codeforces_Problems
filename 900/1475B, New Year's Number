@@ -1,0 +1,17 @@
+t = int(input())
+cases = []
+i = 0
+
+while i < t:
+    cases.append(int(input()))
+    i += 1
+
+for case in cases:
+    if case % 2021 == 0 or case % 2020 == 0:
+        print("YES")
+    else:
+        x = 2021 - (case % 2021)
+        if 2020 * x >= case:
+            print("NO")
+        else:
+            print("YES")
