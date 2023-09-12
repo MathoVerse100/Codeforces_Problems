@@ -1,0 +1,15 @@
+n = int(input())
+test_cases = []
+i = 0
+
+while i < n:
+    test_cases.append(int(input()))
+    i += 1
+
+for case in test_cases:
+    k = 2
+    while True:
+        if case // ((2 ** k) - 1) == case / ((2 ** k) - 1):
+            print(case // ((2 ** k) - 1))
+            break
+        k += 1
