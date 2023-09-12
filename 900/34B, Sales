@@ -1,0 +1,11 @@
+n, m = [int(x) for x in input().split()]
+tvs = [int(x) for x in input().split()]
+minimums = []
+i = 0
+
+while i < m:
+    minimums.append(min(tvs))
+    tvs.remove(min(tvs))
+    i += 1
+
+print(-sum(x for x in minimums if x <= 0))
