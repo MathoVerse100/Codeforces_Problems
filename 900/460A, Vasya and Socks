@@ -1,0 +1,14 @@
+n, m = [int(x) for x in input().split()]
+sequence = []
+i = 1
+
+while n > 0:
+    n = n - 1
+    if i % m == 0:
+        sequence.append(n + 1)
+        n = n + 1
+    else:
+        sequence.append(n)
+    i += 1
+
+print(len(sequence))
