@@ -1,0 +1,35 @@
+def void_absorptions(a, p):
+    i = 0
+    while i < p:
+        a = (a // 2) + 10
+        i += 1
+    return a
+
+
+def lightning_strike(b, q):
+    i = 0
+    while i < q:
+        b = b - 10
+        i += 1
+    return b
+
+
+t = int(input())
+j = 0
+cases = []
+
+while j < t:
+    cases.append([int(x) for x in input().split()])
+    j += 1
+
+for case in cases:
+    x, n, m = case
+    if x < 20:
+        x = lightning_strike(x, m)
+    else:
+        x = void_absorptions(x, n)
+        x = lightning_strike(x, m)
+    if x <= 0:
+        print("YES")
+    else:
+        print("NO")
