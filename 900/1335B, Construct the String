@@ -1,0 +1,43 @@
+import random
+
+
+def word_randomizer(x, y, z):
+    letters = "abcdefghijklmnopqrstuvwxyz"
+    letter_list = list(letters)
+    saved_letters = letters
+    empty_text = ""
+    i = 0
+    if y == z:
+        print(letters * ((x - x % 26) // 26) + letters[0:x % 26])
+    else:
+        while i < min(z, 26):
+            addition = random.choice(letters)
+            empty_text += addition
+            letter_list.remove(addition)
+            letters = "".join(letter_list)
+            i += 1
+        used_letters = list(empty_text)
+        empty_text = empty_text + random.choice(empty_text) * (y - z)
+        while True:
+            s = set(empty_text[-a + 1::])
+            l = set(used_letters) - s
+            if len(empty_text) == x:
+                print(empty_text)
+                break
+            elif len(set(s)) == a - 1 or l == set():
+                empty_text += random.choice(used_letters)
+            else:
+                empty_text += random.choice(list(l))
+
+
+t = int(input())
+cases = []
+i = 0
+
+while i < t:
+    cases.append([int(x) for x in input().split()])
+    i += 1
+
+for case in cases:
+    n, a, b = case
+    word_randomizer(n, a, b)
