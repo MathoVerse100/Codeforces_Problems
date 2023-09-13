@@ -1,0 +1,8 @@
+n = int(input())
+text_input = input()
+
+a = text_input.count("0")
+b = text_input.count("1")
+c = min(a, b)
+
+print(len(text_input) - (2 * c))
