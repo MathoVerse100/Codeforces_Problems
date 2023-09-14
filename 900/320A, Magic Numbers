@@ -1,0 +1,8 @@
+import re
+
+n = input()
+
+if re.findall(r"[^14]", n) or re.search(r"444", n) or n[0] == "4":
+    print("NO")
+else:
+    print("YES")
