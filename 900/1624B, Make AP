@@ -1,0 +1,14 @@
+t = int(input())
+i = 0
+cases = []
+
+while i < t:
+    cases.append([int(x) for x in input().split()])
+    i += 1
+
+for case in cases:
+    a, b, c = case
+    if ((2 * b - c) % a == 0 and (2 * b - c) > 0) or ((a + c) % (2 * b) == 0 and (a + c) > 0) or ((2 * b - a) % c == 0 and (2 * b - a) > 0):
+        print("YES")
+    else:
+        print("NO")
