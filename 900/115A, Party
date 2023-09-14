@@ -1,0 +1,29 @@
+t = int(input())
+cases = []
+i = 0
+
+while i < t:
+    cases.append(int(input()))
+    i += 1
+
+cases = [(i + 1, cases[i]) for i in range(len(cases))]
+
+sequences = []
+groups = []
+
+for case in cases:
+    if case[1] == -1:
+        sequences.append({case})
+    else:
+        s = {case}
+        p = case[1]
+        while True:
+            t = cases[p - 1]
+            s.add(t)
+            if t[1] == -1:
+                break
+            else:
+                p = t[1]
+        sequences.append(s)
+
+print(max(len(sequence) for sequence in sequences))
