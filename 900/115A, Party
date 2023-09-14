@@ -9,7 +9,6 @@ while i < t:
 cases = [(i + 1, cases[i]) for i in range(len(cases))]
 
 sequences = []
-groups = []
 
 for case in cases:
     if case[1] == -1:
