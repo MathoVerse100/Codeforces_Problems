@@ -1,0 +1,24 @@
+t = int(input())
+i = 0
+cases = []
+j = 9
+
+while i < t:
+    cases.append(int(input()))
+    i += 1
+
+for case in cases:
+    j = 9
+    if case > 45:
+        print(-1)
+    else:
+        number_representation = []
+        while j > 0:
+            if case <= j:
+                number_representation.append(str(case))
+                break
+            else:
+                number_representation.append(str(j))
+                case = case - j
+                j -= 1
+        print("".join(list(reversed(number_representation))))
