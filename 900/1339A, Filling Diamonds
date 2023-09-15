@@ -1,0 +1,10 @@
+t = int(input())
+i = 0
+cases = []
+
+while i < t:
+    cases.append(int(input()))
+    i += 1
+
+for case in cases:
+    print(case)
