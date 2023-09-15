@@ -1,0 +1,23 @@
+import re
+
+t = int(input())
+cases = []
+i = 0
+counter = 0
+
+while i < t:
+    cases.append(input())
+    i += 1
+
+for case in cases:
+    counter = 0
+    while True:
+        saved_case = case
+        case = re.sub(r"(01|10)", "", saved_case, count=1)
+        counter += 1
+        if (counter % 2 == 0 and case == "") or (counter % 2 == 1 and case == saved_case):
+            print("NET")
+            break
+        elif (counter % 2 == 0 and case == saved_case) or (counter % 2 == 1 and case == ""):
+            print("DA")
+            break
